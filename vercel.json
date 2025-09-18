@@ -1,16 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "start.sh",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "50mb" }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "start.sh"
-    }
-  ]
+  "buildCommand": "pip install -r requirements.txt && chmod +x start.sh",
+  "outputDirectory": ".",
+  "framework": null
 }
