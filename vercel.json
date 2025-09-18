@@ -1,5 +1,8 @@
 {
-  "buildCommand": "pip install -r requirements.txt && chmod +x start.sh",
-  "outputDirectory": ".",
-  "framework": null
+  "builds": [
+    { "src": "script.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "script.py" }
+  ]
 }
